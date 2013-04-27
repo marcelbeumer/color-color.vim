@@ -1,5 +1,7 @@
-" echomsg 'Hello World'
-
+" Author:       Marcel Bumer <http://github.com/marcelbeumer>
+" Website:      http://github.com/marcelbeumer/color-color.vim
+" Credits:      Max Vasiliev <https://github.com/skammer>
+" License:      WTFPL
 
 function! s:StrLen(str)
   return strlen(substitute(a:str, '.', 'x', 'g'))
