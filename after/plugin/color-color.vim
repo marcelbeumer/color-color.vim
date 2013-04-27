@@ -374,7 +374,6 @@ endfunction
 function! s:ColorColorUpdate()
     if exists("b:colorcolor_on")
         syn clear
-        hi clear
         let b:colorcolor_on = 'yes'
 
         exe 'syn match anything /.*/ contains=@cssColors'
@@ -400,4 +399,4 @@ function! s:ColorColorToggle()
 endfunction
 
 command! ColorColorToggle call s:ColorColorToggle()
-autocmd BufRead,BufWritePost * call s:ColorColorUpdate()
+autocmd BufWritePost * call s:ColorColorUpdate()
