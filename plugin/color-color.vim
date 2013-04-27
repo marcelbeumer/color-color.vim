@@ -374,8 +374,9 @@ endfunction
 function! s:ColorColorUpdate()
     if exists("b:colorcolor_on")
         syn clear
-
+        hi clear
         let b:colorcolor_on = 'yes'
+
         exe 'syn match anything /.*/ contains=@cssColors'
         exe 'hi def link anything Comment'
         call s:ColorColorInit()
